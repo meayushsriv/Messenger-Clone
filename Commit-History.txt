@@ -1,0 +1,19 @@
+Project Name - Messenger Clone
+Created By Ayush Srivastava.
+
+Commit History : 
+
+-> Commit 1 : Initial Setup
+Description: Created a Next.js app, set up the environment, and installed Tailwind CSS.
+Steps Taken:
+1. Initialized a new Next.js project.
+2. Set up environment variables by creating a .env.local file and adding necessary keys.
+3. Configured Tailwind CSS by updating tailwind.config.js and adding Tailwind directives to styles/globals.css.
+
+-> Commit 2 : Restructure and Add Logo
+Description: Moved page.tsx to a new folder to keep the project structure organized and added a logo image.
+Steps Taken:
+1. Moved page.tsx file inside a new folder, app((site)) to better structure the project.
+2. The page.tsx file serves the same purpose and is treated like a root file.
+3. Placed logo.png in the appropriate assets/images folder.
+4. Imported and used logo.png in page.tsx.
