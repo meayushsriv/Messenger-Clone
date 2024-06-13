@@ -17,3 +17,16 @@ Steps Taken:
 2. The page.tsx file serves the same purpose and is treated like a root file.
 3. Placed logo.png in the appropriate assets/images folder.
 4. Imported and used logo.png in page.tsx.
+
+-> Commit 2 : Auth UI
+Description: Moved page.tsx to a new folder to keep the project structure organized and added a logo image.
+Steps Taken:
+1. Integrated the actions required for signing up within the form.
+2. Developed an input component that handles React Hook Form functionality.
+3. The component adjusts based on the presence of errors and whether it is disabled.
+4. Implemented a feature where the sign-in button gets disabled when necessary.
+5. Demonstrated the functionality by disabling the button and showing it visually.
+6. Added a 'disabled' property to the inputs, controlled by the isLoading state.
+7. Applied this property to each input field (e.g., name, email, password).
+8. Verified that clicking the sign-in button disables the input fields and the button itself.
+9. Observed that the fields remain disabled since we haven't implemented the logic to reset 'isLoading' to 'false'.
