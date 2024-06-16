@@ -5,7 +5,7 @@ import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGithub, BsGoogle } from "react-icons/bs";
-
+import axios from "axios";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -35,7 +35,7 @@ const AuthForm = () => {
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
         if(variant==='REGISTER'){
-            //Axios Register
+            axios.post("/api/register", data);
         }
         if(variant==='LOGIN'){
             //NextAuth SignIn
@@ -52,10 +52,10 @@ const AuthForm = () => {
             <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
                     {variant==='REGISTER' && (
-                        <Input id="name" label="Name" register={register} errors={errors} />
+                        <Input id="name" label="Name" register={register} errors={errors} disabled={isLoading}/>
                     )}   
-                    <Input id="email" label="Email address" type="email" register={register} errors={errors} />
-                    <Input id="password" label="Password" type="password" register={register} errors={errors} />
+                    <Input id="email" label="Email address" type="email" register={register} errors={errors} disabled={isLoading}/>
+                    <Input id="password" label="Password" type="password" register={register} errors={errors} disabled={isLoading}/>
                     <div>
                         <Button disabled={isLoading} fullWidth type="submit">{variant==='LOGIN' ? 'Sign in' : 'Register'}</Button>
                     </div>
